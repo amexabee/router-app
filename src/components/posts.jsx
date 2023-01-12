@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Posts extends Component {
-  render() {
-    return <h1>Hello Posts</h1>;
-  }
-}
+const Posts = () => {
+  return <p>Year: , Month:</p>;
+};
 
 export default Posts;

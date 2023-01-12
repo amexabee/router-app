@@ -1,9 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class NavBar extends Component {
-  render() {
-    return <h1>Hello navbar</h1>;
-  }
-}
+const NavBar = () => {
+  return (
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/products">Products</a>
+      </li>
+      <li>
+        <a href="/posts/2018/06">Posts</a>
+      </li>
+      <li>
+        <a href="/admin">Admin</a>
+      </li>
+    </ul>
+  );
+};
 
 export default NavBar;
