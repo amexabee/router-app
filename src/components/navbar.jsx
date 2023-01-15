@@ -1,22 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/products">Products</Link>
-      </li>
-      <li>
-        <Link to="/posts">Posts</Link>
-      </li>
-      <li>
-        <Link to="/admin">Admin</Link>
-      </li>
-    </ul>
+    <>
+      <header>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/products">Products</NavLink>
+          </li>
+          <li>
+            <NavLink to="/posts">Posts</NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin">Admin</NavLink>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };
 
