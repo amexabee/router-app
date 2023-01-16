@@ -44,7 +44,7 @@ class Products extends Component {
             </li>
           ))}
         </ul>
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
     );
   }

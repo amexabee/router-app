@@ -5,10 +5,10 @@ const SideBar = () => {
   return (
     <ul>
       <li>
-        <Link to="/admin/posts">Posts</Link>
+        <Link to="posts">Posts</Link>
       </li>
       <li>
-        <Link to="/admin/users">Users</Link>
+        <Link to="users">Users</Link>
       </li>
     </ul>
   );
