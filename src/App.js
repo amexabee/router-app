@@ -11,17 +11,20 @@ import Posts from './components/posts';
 import Home from './components/home';
 import Dashboard from './components/admin/dashboard';
 import ProductDetails from './components/productDetails';
-// import NotFound from './components/notFound';
+import NotFound from './components/notFound';
 import './App.css';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<NavBar />}>
-      <Route path="/products/:id" element={<ProductDetails />} />
-      <Route path="/products" element={<Products sortBy="newest" />} />
-      <Route path="/posts/:year?/:month?" element={<Posts />} />
-      <Route path="/admin/*" element={<Dashboard />} />
+      <Route path="products" element={<Products sortBy="newest" />}>
+        <Route path=":id" element={<ProductDetails />} />
+      </Route>
+      <Route path="posts/:year?/:month?" element={<Posts />} />
+      <Route path="admin/*" element={<Dashboard />} />
       <Route index element={<Home />} />
+
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
