@@ -1,12 +1,15 @@
-import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { Navigate, useParams } from 'react-router-dom';
 
 const ProductsDetails = () => {
   const { id } = useParams();
-  const handleSave = () => {};
+  const [navigate, setNavigate] = useState(false);
+  if (navigate) return <Navigate to="/products" replace={true} />;
+
   return (
     <div>
       <h1>Product Details - {id}</h1>
-      <button onClick={handleSave}>Save</button>
+      <button onClick={() => setNavigate(true)}>Save</button>
     </div>
   );
 };
